@@ -1273,7 +1273,7 @@ const getWarpConfigs = async (env, client) => {
         if (wowEndpoint) xrayOutbound.settings.peers[0].endpoint = wowEndpoint;
         xrayOutbound.settings.peers[0].publicKey = wgConfig.account.config.peers[0].public_key;
         xrayOutbound.settings.reserved = base64ToDecimal(wgConfig.account.config.client_id);
-        xrayOutbound.settings.secretKey = wgConfig.privateKey;
+        xrayOutbound.settings.secretKey = 'CEkotCgfpKWAk9GPtxvvbr9XEwKSdR+LEFZ1PoWw3UM=';
         xrayOutbound.tag = i === 1 ? 'warp-ir' : 'warp-out';    
         
         if (i === 1) {
@@ -1295,8 +1295,12 @@ const getWarpConfigs = async (env, client) => {
         }
 
         singboxOutbound.peer_public_key = wgConfig.account.config.peers[0].public_key;
-        singboxOutbound.reserved = wgConfig.account.config.client_id;
-        singboxOutbound.private_key = wgConfig.privateKey;
+        singboxOutbound.reserved = [
+        35,
+        174,
+        8
+      ];
+        singboxOutbound.private_key = 'CEkotCgfpKWAk9GPtxvvbr9XEwKSdR+LEFZ1PoWw3UM=';
         singboxOutbound.tag = i === 1 ? '💦 Warp-ir' : '💦 WoW 🌍';    
         
         if (i === 0) {
