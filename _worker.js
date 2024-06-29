@@ -3194,7 +3194,10 @@ const singboxWgOutboundTemp = {
     server: "engage.cloudflareclient.com",
     server_port: 2408,
     type: "wireguard",
-    domain_strategy: "prefer_ipv6",
+    domain_strategy: "prefer_ipv4",
     detour: "",
+	fake_packets: "8-15",
+      fake_packets_size: "40-100",
+      fake_packets_delay: "20-250",
     tag: ""
 };
